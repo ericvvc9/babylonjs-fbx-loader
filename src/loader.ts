@@ -20,6 +20,7 @@ import { FBXSkeleton, IFBXSkeleton } from './mesh/skeleton'
 
 import { FBXConnections, IFBXConnections } from './connections'
 import { FBXTransform } from './node/transform'
+import { Buffer } from 'buffer'
 
 export interface IFBXLoaderRuntime {
   scene: Scene
@@ -94,6 +95,7 @@ export class FBXLoader implements ISceneLoaderPluginAsync {
       transformNodes: container.transformNodes,
       animationGroups: container.animationGroups,
       particleSystems: container.particleSystems,
+      spriteManagers: [],
     }
   }
 
